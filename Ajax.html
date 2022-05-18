@@ -1,0 +1,23 @@
+<html>
+    
+    <body>
+        <div id="xyz"->hello friends </br> Welcome to i2it
+        <button type="button" value="submit" onclick="loadU">
+        </button>
+        </div>
+        <script>
+            function load (){
+                var req=new XMLHttpRequest()
+                req.onreadystatechange=function(){
+                    if(this.readyState==4 &&this.status==200){
+                        document.getElementById("xyz").innerHTML
+                        =this.responseText
+                    }
+        
+                }
+                req.open('GET, 'data.txt',true)
+                req.send()
+            }
+        </script>
+    </body>
+</html>
